@@ -36,3 +36,5 @@ sites/simpletest
 # simpletest
 
 github.php
+dump
+.idea

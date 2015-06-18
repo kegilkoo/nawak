@@ -1,0 +1,7 @@
+mydashboard.content:
+  path: '/mydb'
+  defaults:
+    _controller: '\Drupal\mydashboard\Controller\MydbController::content'
+    _title: 'Pouet !'
+  requirements:
+    _permission: 'access content'

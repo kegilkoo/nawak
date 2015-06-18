@@ -1,0 +1,6 @@
+mydashboard.admin:
+  title: 'My dashboard'
+  description: 'Main page'
+  parent: system.admin_config_development
+  route_name: mydashboard.content
+  weight: 100
