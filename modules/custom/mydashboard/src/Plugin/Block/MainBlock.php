@@ -6,7 +6,8 @@ use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Provides a 'Hello' Block
+ * Class MainBlock
+ * classe permetant de créer un block
  *
  * @Block(
  *   id = "mainblock",
@@ -15,7 +16,8 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class MainBlock extends BlockBase implements BlockPluginInterface{
     /**
-     * {@inheritdoc}
+     * dans la {@inheritdoc}, permet de builder le block
+     * @return array
      */
     public function build() {
         $config = $this->getConfiguration();
@@ -34,7 +36,10 @@ class MainBlock extends BlockBase implements BlockPluginInterface{
     }
 
     /**
-     * {@inheritdoc}
+     * dans la {@inheritdoc}, permet de gérer le contenu du block
+     * @param $form
+     * @param $form_state FormStateInterface
+     * @return $form
      */
     public function blockForm($form, FormStateInterface $form_state){
         $form = parent::blockForm($form, $form_state);
@@ -52,14 +57,17 @@ class MainBlock extends BlockBase implements BlockPluginInterface{
     }
 
     /**
-     * {@inheritdoc}
+     * dans la {@inheritdoc}, permet de gérer le submit du block
+     * @param $form
+     * @param $form_state FormStateInterface
      */
     public function blockSubmit($form, FormStateInterface $form_state){
         $this->setConfigurationValue('mydb_settings', $form_state->getValue('mydb_settings'));
     }
 
     /**
-     * {@inheritdoc}
+     * dans la {@inheritdoc}, permet de gérer la configuration par défaut du block
+     * @return array
      */
     public function defaultConfiguration(){
        $default_config = \Drupal::config('mydashboard.settings');
