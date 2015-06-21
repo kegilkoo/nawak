@@ -37,9 +37,9 @@ class MainBlock extends BlockBase implements BlockPluginInterface{
 
     /**
      * dans la {@inheritdoc}, permet de gérer le contenu du block
-     * @param $form
+     * @param $form array
      * @param $form_state FormStateInterface
-     * @return $form
+     * @return $form array
      */
     public function blockForm($form, FormStateInterface $form_state){
         $form = parent::blockForm($form, $form_state);
@@ -58,7 +58,7 @@ class MainBlock extends BlockBase implements BlockPluginInterface{
 
     /**
      * dans la {@inheritdoc}, permet de gérer le submit du block
-     * @param $form
+     * @param $form array
      * @param $form_state FormStateInterface
      */
     public function blockSubmit($form, FormStateInterface $form_state){
@@ -70,7 +70,7 @@ class MainBlock extends BlockBase implements BlockPluginInterface{
      * @return array
      */
     public function defaultConfiguration(){
-       $default_config = \Drupal::config('mydashboard.settings');
+        $default_config = \Drupal::config('mydashboard.settings');
         return array(
             'mydb_settings' => $default_config->get('mydb.test')
         );
