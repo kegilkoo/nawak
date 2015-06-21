@@ -1,0 +1,8 @@
+raspberries.default_controller_hello:
+  path: '/raspberries/hello/{name}'
+  defaults:
+    _controller: '\Drupal\raspberries\Controller\DefaultController::hello'
+    _title: 'raspberries Title'
+  requirements:
+    _permission: 'access content'
+
