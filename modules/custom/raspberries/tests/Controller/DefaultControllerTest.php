@@ -5,7 +5,7 @@
  * Contains Drupal\raspberries\Tests\DefaultController.
  */
 
-namespace Drupal\raspberries\Tests;
+namespace Drupal\raspberries\tests;
 
 use Drupal\simpletest\WebTestBase;
 

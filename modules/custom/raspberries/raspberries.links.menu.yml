@@ -1,0 +1,9 @@
+    raspberries.menu.listown:
+      title: My raspberries
+      route_name: raspberries.listown
+
+    raspberries.menu.addnew:
+      title: Add new
+      route_name: raspberries.addnew
+      weight: 0
+      parent: raspberries.menu.listown

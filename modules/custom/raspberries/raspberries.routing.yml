@@ -1,8 +1,13 @@
-raspberries.default_controller_hello:
-  path: '/raspberries/hello/{name}'
+raspberries.addnew:
+  path: '/addnew'
   defaults:
-    _controller: '\Drupal\raspberries\Controller\DefaultController::hello'
-    _title: 'raspberries Title'
+    _controller: '\Drupal\raspberries\Controller\AddnewController::main'
   requirements:
     _permission: 'access content'
 
+raspberries.listown:
+  path: '/list'
+  defaults:
+    _controller: '\Drupal\raspberries\Controller\ListController::all'
+  requirements:
+    _permission: 'access content'
